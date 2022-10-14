@@ -4,34 +4,32 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Currency Converter</title>
-        <meta name="description" content="Realtime currency conversions on the fly">
-        <!--
+        <link rel="icon" type="image/png" sizes="32x32" href="images/money.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
         <link rel="stylesheet" href="styles/small.css">
         <link rel="stylesheet" media="screen and (min-width: 64em)" href="styles/large.css">
+
         <link href="https://fonts.googleapis.com/css?family=Acme|Archivo+Narrow|Quicksand" rel="stylesheet">
-        -->
+
     </head>
     <body onload="loadPage()">
         <main>
-            <p class="form-label">Select Current Currency</p>
-            <select id="current-curr">
-                <option value="" disabled selected>Current Currency</option>
-                <option value="USD">USD</option>
-                <option value="EUR">EUR</option>
+
+            <p>Date</p>
+            <input type="date" id='date'>
+
+            <p>From</p>
+            <select id="current-curr" onchange="getExchange()">
             </select>
-            <p class="form-label">Select New Currency</p>
-            <select id="new-curr">
-                <option value="" disabled selected>New Currency</option>
-                <option value="USD">USD</option>
-                <option value="EUR">EUR</option>
+            <input type="text" id="amount"  onchange="getExchange()">
+
+            <p>To</p>
+            <select id="new-curr" onchange="getExchange()">
             </select>
-            <p class="form-label">Amount to Convert</p>
-            <input type="text" id="amount" required>
-            <p class="form-label">Date</p>
-            <input type="date" name="date" id='date' required>
-            <p id="new-value">$700</p>
-            <button onclick="getExchange()">Click me</button>
+            <input type="text" id="new-value" onchange="getExchangeReverse()">
+            
+            
 
         </main>
         <!--
@@ -43,11 +41,6 @@
 
     <script src="js/initialLoad.js"></script>
     <script src="js/currency.js"></script>
-    <!--
-    <script src="scripts/currentdate.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/stormseverity.js"></script>
-    -->
 
     </body>
 
