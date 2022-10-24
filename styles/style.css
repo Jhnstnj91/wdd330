@@ -1,0 +1,28 @@
+/*************************Entire Document***************************/
+* {
+    margin : 0px;
+    padding: 0px;
+}
+/*****************************Color Set*****************************/
+:root {
+    --darkgreen:#40531B;
+    --mediumgreen: #618B4A;
+    --lightgreen: #AFBC88;
+    --grey: #7aa095;
+    --white: #d7F9F1;
+} 
+/*******************************Body*******************************/
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size:1em;
+    
+    text-align: center;
+    display: flex;
+    justify-content:center
+}
+/***************************Main App********************************/
+main {
+    margin-top: 5%;
+    background-color: var(--white);
+    width: 500px;
+}
